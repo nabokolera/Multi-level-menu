@@ -1,0 +1,130 @@
+body{
+    margin:0;
+    padding: 0;
+}
+.menu {
+    width: 100%;
+    background-color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    border-bottom: 5px solid royalblue;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+}
+
+.menu ul,
+.menu li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu ul {
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li:hover {
+    position: relative;
+    cursor: default;
+}
+
+.menu ul ul {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+       
+}
+
+.menu ul ul li {
+    float: none;
+}
+
+.menu ul ul ul {
+    top: 0;
+    left: auto;
+    right: -100%;
+}
+
+.menu ul li:hover>ul {
+    visibility: visible;
+}
+
+.menu ul {
+    display: inline;
+}
+
+.menu:after,
+.menu ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.menu a {
+    color: gainsboro;
+    padding: 0 55px;
+}
+
+
+.menu ul ul {
+    text-transform: none;
+    min-width: 100%;
+}
+
+.menu ul ul a {
+    background: royalblue;
+    color:snow;
+    border: 1px solid royalblue;
+    padding: 15px 20px;
+}
+
+.menu ul ul li {
+    position: relative
+}
+
+.menu>ul>li>a {
+    line-height: 50px;
+}
+
+.menu ul ul li:first-child>a {
+    border-top: 4px solid royalblue;
+}
+
+.menu ul ul li:hover>a {
+    background:dodgerblue;
+}
+
+.menu ul ul li.sub>a:after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -10px;
+}
+
+.menu ul li:hover>a {
+    background: dodgerblue;
+    color:snow;
+}
+
+.menu ul li.sub>a:after {
+    content: '+';
+    margin-left: 5px;
+}
+
+.menu ul li.last ul {
+    left: auto;
+    right: 0;
+}
+
+.menu ul li.last ul ul {
+    left: auto;
+    right: 100%;
+}
